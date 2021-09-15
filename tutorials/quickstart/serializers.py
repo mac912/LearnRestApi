@@ -8,4 +8,10 @@ class EmployeeSerializer(serializers.Serializer):
     password = serializers.CharField(max_length=30)
     phone = serializers.CharField(max_length=10)
 
+class UserSerializer(serializers.Serializer):
+    id = serializers.IntegerField(required=False)
+    username = serializers.CharField(max_length=30)
+    email = serializers.EmailField()
+    password = serializers.CharField()
+
     
